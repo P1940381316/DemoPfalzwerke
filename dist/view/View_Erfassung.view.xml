@@ -1,0 +1,98 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:form="sap.ui.layout.form"
+	xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified" controllerName="de.pfalzwerke.controller.View_Erfassung">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<form:SimpleForm editable="true"
+						layout="ResponsiveGridLayout" id="__form0">
+						<form:content>
+							<core:Title text="Bitte erfasse die Daten zu Deiner bevorstehenden Reise" id="__title0"/>
+								<l:VerticalLayout class="sapUiResponsiveMargin">
+									<HBox class="sapUiSmallMargin" id="hb1">
+										<VBox class="sapUiSmallMargin" width="50%">
+											<Label text="Von" labelFor="DP1"/>
+											<DatePicker id="DP1" placeholder="Datum eingeben.." change="handleChange" class="sapUiSmallMarginBottom"/>
+										</VBox>
+										<VBox class="sapUiSmallMargin" width="50%">
+											<Label text="Bis" labelFor="DP2"/>
+											<DatePicker id="DP2" placeholder="Datum eingeben.." change="handleChange" class="sapUiSmallMarginBottom"/>
+										</VBox>
+									</HBox>
+									<HBox class="sapUiSmallMargin" id="hb2">
+										<VBox class="sapUiSmallMargin" width="100%">
+											<Label text="Reisegrund" id="__label1"/>
+											<Input width="100%" placeholder="Reisegrund eingeben..." id="__input2"/>
+											<Label text="Reiseziel" id="__lab_reiseZiel"/>
+											<Input width="100%" placeholder="Reiseziel eingeben..." id="_ipReiseziel"/>
+										</VBox>
+									</HBox>
+									<HBox class="sapUiSmallMargin" wrap="Wrap" id="hb4" width="auto">
+										<VBox class="sapUiSmallMargin" width="auto">
+											<Label text="Tätigkeit" id="label_tatetigekeit"/>
+											<Select selectedItem="item1" selectedKey="item1" selectedItemId="_item3" id="_select1" width="auto">
+												<items>
+													<core:ListItem text="Tätigkeit 1" key="item1" id="__item3"/>
+													<core:ListItem text="Tätigkeit 2" key="item2" id="__item4"/>
+													<core:ListItem text="Tätigkeit 3" key="item3" id="__item5"/></items>
+											</Select>
+										</VBox>
+										<VBox class="sapUiSmallMargin" width="auto">
+											<Label text="Reisemittel" id="label_Reisemittel"/>
+											<Select selectedItem="item1" selectedKey="item1" selectedItemId="_itemvk3" id="_select2" width="auto">
+												<items>
+													<core:ListItem text="Firmenfahrzeug" key="item1" id="_itemvk3"/>
+													<core:ListItem text="Bahn" key="item2" id="_itemvk4"/>
+													<core:ListItem text="Flugzeug" key="item3" id="_itemvk5"/></items>
+											</Select>
+										</VBox>
+										<VBox class="sapUiSmallMargin" width="auto">
+											<Label text="Voraussichtliche Kosten" id="label_VorKosten"/>
+											<Input width="100%" type="Number" id="_ipVorKosten"/>
+										</VBox>
+									</HBox>
+									<HBox class="sapUiSmallMargin" id="hb5" width="auto">
+										<VBox class="sapUiSmallMargin" width="30%">
+											<Label text="Möchten Sie einen Vorschuss beantragen" width="auto" textAlign="Left"/>
+											<RadioButtonGroup columns="3" width="500px" class="sapUiMediumMarginBottom">
+												<buttons>
+													<RadioButton id="RB1-1" text="Ja"/>
+													<RadioButton id="RB1-2" text="Nein"/>
+												</buttons>
+											</RadioButtonGroup>
+										</VBox>
+									</HBox>
+									<HBox class="sapUiSmallMargin" id="hb6" width="100%">
+										<VBox class="sapUiSmallMargin" width="100%">
+											<u:FileUploader id="fileUploader" name="myFileUpload" uploadUrl="upload/" width="400px" tooltip="Upload your file to the local server"
+												uploadComplete="handleUploadComplete" change="handleValueChange" typeMissmatch="handleTypeMissmatch" style="Emphasized" fileType="txt,jpg"
+												placeholder="Wähle ein Datei zum hochladen...">
+												<u:parameters>
+													<u:FileUploaderParameter name="param1" value="Foo"/>
+													<u:FileUploaderParameter name="param2" value="bar"/>
+												</u:parameters>
+												<u:headerParameters>
+													<u:FileUploaderParameter name="headerParam1" value="Foo"/>
+													<u:FileUploaderParameter name="headerParam2" value="bar"/>
+												</u:headerParameters>
+											</u:FileUploader>
+											<Button text="{i18n>fileUploadButton}" press="handleUploadPress"/>
+										</VBox>
+									</HBox>
+								</l:VerticalLayout>
+						
+						</form:content>
+					</form:SimpleForm>
+				</content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button text="Speichern" type="Accept" press="handleConfirmationMessageBoxPress"/>
+						<!--	<Button text="Speichern" type="Accept"/> -->
+						<Button text="Verwerfen" type="Reject" press="onCancel"/>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

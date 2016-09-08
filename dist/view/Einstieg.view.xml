@@ -1,0 +1,28 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	controllerName="de.pfalzwerke.controller.Einstieg" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="{i18n>einstiegName}">
+				<content>
+					<l:VerticalLayout class="sapUiSmallMargin" width="auto">
+						<Label text="Bitte wähle aus was du machen möchtest?" width="auto"/>
+						<Select selectedItem="item1" selectedKey="item1" selectedItemId="_itemreis1" id="_selectReis" width="auto">
+							<items>
+								<core:ListItem text="Dienstreise beantragen" key="item1" id="_itemreis1"/>
+								<core:ListItem text="Reise abrechnen" key="item2" id="_itemreis2"/>
+								<core:ListItem text="Reise bearbeiten" key="item3" id="_itemreis3"/>
+							</items>
+						</Select>
+					</l:VerticalLayout>
+				</content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button text="Weiter" type="Accept" press="onWeiter"/>
+						<Button text="Abbrechen" type="Reject"/>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
