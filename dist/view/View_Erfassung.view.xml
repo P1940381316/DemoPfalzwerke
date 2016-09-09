@@ -2,7 +2,7 @@
 	xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified" controllerName="de.pfalzwerke.controller.View_Erfassung">
 	<App>
 		<pages>
-			<Page title="{i18n>title}">
+			<Page id="vE1p" title="{i18n>title}">
 				<content>
 					<form:SimpleForm editable="true"
 						layout="ResponsiveGridLayout" id="__form0">
