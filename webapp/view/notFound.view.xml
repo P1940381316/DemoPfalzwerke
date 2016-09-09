@@ -2,7 +2,7 @@
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
-			<Page title="Title">
+			<Page id="pg1" title="Title">
 				<content></content>
 			</Page>
 		</pages>
