@@ -18,7 +18,7 @@
 											<Label text="Bis" labelFor="DP2"/>
 											<DatePicker id="DP2" placeholder="Datum eingeben.." change="handleChange" class="sapUiSmallMarginBottom"/>
 										</VBox>
-									</HBox>
+									</HBox> 
 									<HBox class="sapUiSmallMargin" id="hb2">
 										<VBox class="sapUiSmallMargin" width="100%">
 											<Label text="Reisegrund" id="__label1"/>
